@@ -51,7 +51,3 @@ Manager View Sorted By Status:
 ![ERS_Manager_Page](src/main/resources/static/images/ERS_mgr_sorted1.png)
 
 <hr />
-
-### License
-This project uses the following license: <[GNU General Public License](LICENSE)>.
-
