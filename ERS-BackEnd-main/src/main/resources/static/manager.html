@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager Page</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="./css/manager.css">
+</head>
+<body>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo"><img src="./images/logo.svg" alt="logo" /></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li class="active"> <a style="color: hsl(230, 29%, 20%);" id="manager-logout">LOGOUT</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="main-body">
+  <div class="main-left">
+  <div class="card">
+    <div id="main-user">
+      <h2>Your manager account:</h2>
+      <p id="manager"></p>
+    </div>
+    </div>
+
+
+    <div class="card">
+      <form action="/" method="PUT" id="approval-request-form">
+      <span class="card-title">Approve Reimbursement Request</span>
+      <div class="row">
+        <div class="input-field">
+          <input id="aId" type="number" class="validate" required>
+          <label for="aId">Reimbursement Id</label>
+        </div>
+      </div>
+    <div class="row">
+      <div class="input-field">
+        <input id="aStatus" type="number" class="validate" required>
+        <label for="aStatus">New Status</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <input id="aResolved" type="date" class="validate" required>
+        <label for="aResolved">Resolved On</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <input id="aResolver" type="number" class="validate" required>
+        <label for="aResolver">Approved By</label>
+      </div>
+    </div>
+    <br />
+    <div class="card-action">
+      <a class="waves-effect waves-light btn btn-red" id="approval-button">APPROVE</a>
+    </div>
+</div>
+</form>
+</div>
+
+<div class="card" id="all-reimbursements">
+ 
+  <table class="highlight table table-sort">
+    <thead>
+      <tr>
+          <th>Id</th>
+          <th>Amount</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Submitted On</th>
+          <th>Submitted By</th>
+          <th>
+            <select name="status" id="status">
+              <option value="" selected></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+          </th>
+          <th>Resolved On</th>
+          <th>Approved By</th>
+      </tr>
+    </thead>
+
+    <tbody id="manager-reimbursements">
+    </tbody>
+  </table>
+</div>
+  <div id="results-reimbursement"></div>
+
+</div>
+
+
+<script src="js/manager.js"></script>
+<script src="js/filterStatus.js"></script>
+</body>
+</html>

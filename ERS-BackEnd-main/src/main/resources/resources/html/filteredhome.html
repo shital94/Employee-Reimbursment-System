@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finance Manager Home</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./resources/css/login.css">
+</head>
+<body class="container-fluid">
+	<h2 style=text-align:left;padding:40px>Welcome to your Reimbursements Home Page</h2>
+	<div class="table-container" style=display:flex;flex-direction:center;padding-left:40px;padding-right:40px>
+	<table id="reimbtableman" style=border:1px;border-color:solid#999>
+		<tr style=background-color:#6d8586>
+			<th>Reimbursement ID</th>
+			<th>Amount</th>
+			<th>Submitted</th>
+			<th>Resolved</th>
+			<th>Description</th>
+			<th>Author</th>
+			<th>Resolver</th>
+			<th>Status</th>
+			<th>Reimbursement Type</th>
+		</tr>
+
+	</table>
+	<br>
+
+	<div><br>
+			
+			<form method="post" action="/project1/filterby.change">
+			<h4>Filter By: </h4>
+			<select id="filterby" name="filterby">
+				<option value="pending">Pending</option>
+				<option value="approve">Approved</option>
+				<option value="deny">Denied</option>
+				<option value="all">All</option>
+			</select>
+			<input type="submit" value="Filter Now" class="filter_btn"/>
+			</form>
+		</div><br><br>
+	<form method="post" action="/project1/changestatus.change"><br>
+			<p>Change Reimbursement Status</p>
+			<select id="approvalstatus" name="approvalstatus">
+				<option value="pending">Pending</option>
+				<option value="approve">Approve</option>
+				<option value="deny">Deny</option>
+			</select>
+			<input type="text" placeholder="Reimbursement ID" name="reimbid"/>
+			<input type="submit" value="Submit" class="register_btn"/>
+		</form>
+		<br><br><form method="post" action="/project1/logout.change">
+		<button id="logout">Log Out</button>
+	</form>
+		</div>
+	</div>
+	<script src="resources/js/filteredreimbs.js"></script>
+
+</body>
+</html>

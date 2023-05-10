@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registration</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./resources/css/login.css">
+</head>
+<body class="container-fluid">
+	
+	
+	<div class="homepage-container">
+	<div class="card" style=height:670px>
+		<div class="card-header">
+		<h3>Register New User</h3>
+		<form method="post" action="/project1/registrationsuccess.change">
+		
+			<p>Fill out the Following to Register New User</p>
+			<p>First Name: </p>
+			<input placeholder="Enter First Name" name="firstname"><br>
+			<p>Last Name: </p>
+			<input placeholder="Enter Username" name="lastname"><br>
+			<p>Username: </p>
+			<input placeholder="Enter Username" name="username"><br>
+			<p>Password: </p>
+			<input placeholder="Enter Password" name="password"><br>
+			<p>Email Address: </p>
+			<input placeholder="Enter Email Address" name="email"><br>
+			<p>Employee Role: </p>
+			<input type="radio" id="employee" name="urole" value="employee">
+			<label for="employee">Employee</label><br>
+			<input type="radio" id="financemanager" name="urole" value="financemanager">
+			<label for="financemanager">Finance Manager</label><br>
+			<br>
+			<input type="submit" value="Register"/>
+		</form>
+		</div>
+		</div>
+	</div>
+</body>
+</html>
